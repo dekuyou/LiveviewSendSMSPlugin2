@@ -1,0 +1,31 @@
+<PreferenceScreen	xmlns:android="http://schemas.android.com/apk/res/android" android:title="SendSMS" android:key="SendSMS">
+	<!--
+		Add your additional preferences here.
+	-->
+<PreferenceCategory android:title="Messages" android:key="Messages" android:order="10">
+	<EditTextPreference android:title="Msg1" android:key="Msg1" android:order="50"></EditTextPreference>
+	<EditTextPreference android:title="Msg2" android:key="Msg2" android:order="60"></EditTextPreference>
+	<EditTextPreference android:title="Msg3" android:key="Msg3" android:order="70"></EditTextPreference>
+	<EditTextPreference android:title="Msg4" android:key="Msg4" android:order="80"></EditTextPreference>
+	<EditTextPreference android:title="Msg5" android:key="Msg5" android:order="90"></EditTextPreference>
+	<EditTextPreference android:title="Msg6" android:key="Msg6" android:order="100"></EditTextPreference>
+	<EditTextPreference android:title="Msg7" android:key="Msg7" android:order="110"></EditTextPreference>
+	<EditTextPreference android:title="Msg8" android:key="Msg8" android:order="120"></EditTextPreference>
+	<EditTextPreference android:title="Msg9" android:key="Msg9" android:order="130"></EditTextPreference>
+	<EditTextPreference android:title="Msg10" android:key="Msg10" android:order="140"></EditTextPreference>
+<EditTextPreference android:title="Msg11" android:order="150" android:key="Msg11"></EditTextPreference>
+<EditTextPreference android:title="Msg12" android:order="160" android:key="Msg12"></EditTextPreference>
+<EditTextPreference android:title="Msg13" android:order="160" android:key="Msg13"></EditTextPreference>
+<EditTextPreference android:title="Msg14" android:key="Msg14" android:order="170"></EditTextPreference>
+<EditTextPreference android:title="Msg15" android:order="180" android:key="Msg15"></EditTextPreference>
+
+
+
+</PreferenceCategory>
+<PreferenceCategory android:title="contacts" android:key="contacts" android:order="20" >
+    <EditTextPreference android:key="contact1" android:title="contact1" android:order="10" android:inputType="number"></EditTextPreference>
+    <EditTextPreference android:key="contact2" android:title="contact2" android:order="20" android:inputType="number"></EditTextPreference>
+    <EditTextPreference android:key="contact3" android:title="contact3" android:order="30" android:inputType="number"></EditTextPreference>
+    <CheckBoxPreference android:key="contact0" android:order="0" android:title="view top"></CheckBoxPreference>
+</PreferenceCategory>
+</PreferenceScreen>

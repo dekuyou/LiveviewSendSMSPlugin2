@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.ddo.dekuyou.liveview.plugins.sendsms2" android:versionName="2.6" android:versionCode="7">
+	<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+	<uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:description="@string/application_description">
+		
+		
+		
+		<activity android:label="@string/app_name" android:name="com.sonyericsson.extras.liveview.plugins.PluginPreferences" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		
+		<service
+			android:name="jp.ddo.dekuyou.liveview.plugins.sendsms2.SendSMSPluginService"
+			android:label="Sandbox plugin service">
+			<intent-filter>
+				<action
+					android:name="jp.ddo.dekuyou.liveview.plugins.sendsms2.sendsmspluginservice" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</service>
+		<activity android:name="com.sonyericsson.extras.liveview.plugins.PluginPreferences"
+			android:label="SendSMS plugin preferences">
+			<intent-filter>
+				<action android:name="jp.ddo.dekuyou.liveview.plugins.sendsms2.PREFERENCES"></action>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<receiver android:name="com.sonyericsson.extras.liveview.plugins.PluginReceiver">
+			<intent-filter>
+				<action android:name="com.sonyericsson.extras.liveview.LAUNCH_PLUGIN" />
+			</intent-filter>
+		</receiver>
+		
+        <receiver
+            android:name=".LiveViewSaverReceiver"
+            android:enabled="true">
+            <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+        </receiver>		
+	</application>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-sdk android:minSdkVersion="7" />
+</manifest>

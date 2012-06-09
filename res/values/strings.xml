@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SendSMS plugin</string>
+    <!-- 
+    	The following strings needs to be defined in order for the Plugin to function.
+    -->
+    <string name="pluginname">SendSMS</string>
+    <string name="intent_preferences">jp.ddo.dekuyou.liveview.plugins.sendsms2.PREFERENCES</string>
+    <string name="intent_service">jp.ddo.dekuyou.liveview.plugins.sendsms2.sendsmspluginservice</string>
+    <string name="application_description">Extends:com.sonyericsson.extras.liveview</string>
+</resources>
